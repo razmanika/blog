@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\AboutUsController;
-use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +22,8 @@ Route::get('/', function () {
 Route::get('/about_us', [AboutUsController::class, 'index']);
 
 Route::get('/posts', [PostController::class, 'posts'])->name('posts');
+
+Route::get('/posts/{post}/show', [PostController::class, 'showPost'])->name('show');
+
+
+
