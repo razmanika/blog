@@ -23,7 +23,8 @@ Route::get('/about_us', [AboutUsController::class, 'index']);
 
 Route::get('/posts', [PostController::class, 'posts'])->name('posts');
 
-Route::get('/posts/{post}/show', [PostController::class, 'showPost'])->name('show');
+Route::get('/posts/create', [PostController::class, 'create'])->name('create.post');
 
+Route::get('/posts/{post}', [PostController::class, 'showPost'])->name('show');
 
-
+Route::post('/posts/save_post', [PostController::class, 'save'])->name('save.post');
